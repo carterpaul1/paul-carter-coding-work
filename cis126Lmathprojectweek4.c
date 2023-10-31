@@ -7,6 +7,9 @@
 #include <stdlib.h>
 #include <math.h>
 
+#define MENU_SIZE 50
+const char userName = 12;
+
 int add(int x, int y);
 int subtract(int x, int y);
 int multiply(int x, int y);
@@ -38,6 +41,13 @@ int main() {
     while (math != 5) {
         printf("Choose a math operation\n\t 1 add\n\t 2 sub\n\t 3 mult\n\t 4 div\n\t 5 exit\n\t");
         scanf("%d", &math);
+        
+        while(math !=1 && math != 2 && math != 3 && math != 4 && math != 5) // vaildation loop
+        {
+        	printf("That is an invaild entry.\n ");
+        	printf("Choose a math operation\n\t 1 add\n\t 2 sub\n\t 3 mult\n\t 4 div\n\t 5 exit\n\t");
+        	scanf_s("%d", &math, math, 5);
+		}
 
         if (math == 5) {
             printf("Thank you, %s, for using the program!\n", userName);
