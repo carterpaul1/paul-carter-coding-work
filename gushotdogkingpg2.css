@@ -1,0 +1,132 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #FFF9E6; /* Light yellow for background */
+    font-family: 'Open Sans', Arial, sans-serif; /* Updated font family */
+    color: #333; /* Dark gray for text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Container for centering content */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Center content within a max width */
+    padding: 20px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #D32F2F; /* Red */
+    padding: 20px;
+    color: #FFFFFF; /* White */
+}
+
+/* Navigation */
+#topnav-centered {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #616161; /* Dark Gray */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#topnav-centered button {
+    background-color: #333; /* Dark Gray */
+    color: #FFFFFF; /* White */
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    padding: 0 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#topnav-centered button:hover {
+    background-color: #757575; /* Lighter Gray */
+}
+
+#topnav-centered ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Unvisited link */
+a:link {
+    color: midnightblue;
+    display: block;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Visited link */
+a:visited {
+    color: purple;
+    display: block;
+    padding: 8px;
+}
+
+/* Content */
+#content-centered {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px; /* Center content within a max width */
+}
+
+/* Slideshow */
+#slideshow {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Center slideshow within a max width */
+}
+
+#slideshow img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    #topnav-centered {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #topnav-centered button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+        
+            
+        
+
+

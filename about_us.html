@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Gus's Hot dog King About_Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="gushotdogkingpg2.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<header id="banner-centered">
+    <h1>About Us</h1>
+</header>
+<nav id="topnav-centered">
+    <button onClick="window.location.href='index.html'">Home</button>
+    <button onClick="window.location.href='menu.html'">Menu</button>
+    <button onClick="window.location.href='contact_us.html'">Contact Us</button>
+</nav>
+<content id="content-centered">
+    <p> In 1968 a man by the name of Gus migrated from Greece in search of a dream.<br>
+        On April 1,1972, Gus opened his first hot dog stand in Newport News, Va.<br>
+        Which later grew into a full sit in-diner. Throughout the years people from<br>
+        all over have travled miles to have a hot dog "all the way", mouth watering chili cheese fries,<br>
+        and our southern style barbecue.<br>
+        After the passing of Gus back in 1994 his wife Stavroula took over the business,<br>
+        and later added his name to the title. In 2003 her son, George returned home after<br>
+        graduating from George Mason University to help his mother with the family business.</p>
+</content>
+<div id="slideshow"></div>
+<script>
+    var images = ["hdkcrew.jpg", "stavroula.jpg", "flagdog2.jpg", "georgefry.jpg"];
+    var currentImg = 0;
+    function showSlides() {
+        var slideshow = document.getElementById("slideshow");
+        var imgContainer = document.createElement("div");
+        imgContainer.className = "mySlides fade";
+        var img = new Image();
+        img.src = images[currentImg];
+        imgContainer.appendChild(img);
+        slideshow.innerHTML = ''; // Clear previous image
+        slideshow.appendChild(imgContainer);
+        currentImg++;
+        if (currentImg === images.length) {
+            currentImg = 0;
+        }
+        setTimeout(showSlides, 2500); // Change image every 2.5 seconds (adjust as needed)
+    }
+    showSlides(); // Start the slideshow
+</script>
+</body>
+</html>
+  

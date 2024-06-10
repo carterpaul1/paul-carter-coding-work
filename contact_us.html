@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Gus's Hot Dog King Contact Us</title>
+<link href="gus'shotdogkingpg5.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 week">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="banner-centered">
+    <h1>Contact Us</h1>
+</div>
+
+<div id="topnav-centered">
+    <button onClick="window.location.href='index.html'">Home</button>
+    <button onClick="window.location.href='about_us.html'">About Us</button>
+    <button onClick="window.location.href='Menu.html'">Menu</button>
+</div>
+
+<section>
+    <div id="address-centered">
+        <h2>10725 Jefferson Ave.<br>Newport News, Va 23601 </h2>
+        <p>Call us at <a href="tel:7575951630">757-595-1630</a>.</p>
+    </div>
+</section>
+
+<div id="slideshow"></div>
+
+<div id="contact_info-centered">
+    <a href="https://www.facebook.com/Gusshotdogking" class="social-icon">
+        <i class="fab fa-facebook"></i>
+    </a>
+    <a href="mailto:georgehdk@hotmail.com" class="social-icon">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+
+<script>
+  var images = ["bbq.jpg","gusmakingdog.jpg" , "corndogs.jpg","ballonpic.jpg","img001.jpg" ];
+  var currentImg = 0;
+
+  function showSlides() {
+    var slideshow = document.getElementById("slideshow");
+     var imgContainer = document.createElement("div");
+      imgContainer.className = "mySlides fade";
+
+      var img = new Image();
+      img.src = images[currentImg];
+      imgContainer.appendChild(img);
+      slideshow.innerHTML = ''; // Clear previous image
+      slideshow.appendChild(imgContainer);
+
+      currentImg++;
+      if (currentImg === images.length) {
+        currentImg = 0;
+      }
+
+      setTimeout(showSlides, 2500); // Change image every 2.5 seconds (adjust as needed)
+    }
+
+    showSlides(); // Start the slideshow
+</script>
+</body>
+</html>
+
+
