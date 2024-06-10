@@ -1,0 +1,59 @@
+body{
+	color:#FF0000;
+	background-color:#FFD700;
+	
+}
+#banner{
+	Background-color:#FF0000;
+	color:#FFD700;
+	text-align:center;
+}
+ul{
+	background-color:green;
+	float:left;
+	list-style-type:none;
+    height: 160px;
+    width:  160px;
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visted{
+    display:block;
+    widith: 160px;
+    height: 160px;
+    background-color:red;
+    color:blue;
+    line-height: 100px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding:5px;
+}
+    
+a:hover, a:active{
+    background-color:lightcoral;
+}
+    
+    
+
+img {
+	max-widith: 100%
+}
+input, textarea {
+ max-widith:100%
+}
+body { font-size:1.125em; }
+h1 { font-size: 2.4em; }
+p  { font-size: 1.4em; }
+li { font-size: 1.500em; }
+#content{
+	font-size:30;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+
+/

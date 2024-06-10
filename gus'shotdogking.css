@@ -1,0 +1,156 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #FFF9E6; /* Light yellow for background */
+    font-family: 'Open Sans', Arial, sans-serif; /* Updated font family */
+    color: #333; /* Dark gray for text */
+}
+
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* This line should end with a curly brace { */
+    gap: 10px;
+} /* Here's where you can add comments */
+
+
+/* Header */
+header {
+    grid-column: 1 / span 12;
+    text-align: center;
+    background-color: #D32F2F; /* Red */
+    padding: 20px;
+    color: #FFFFFF; /* White */
+}
+
+/* Navigation */
+#topnav-centered {
+    grid-column: 1 / span 12;
+    text-align: center;
+    padding: 10px;
+    background-color: #616161; /* Dark Gray */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#topnav-centered button {
+    background-color: #333; /* Dark Gray */
+    color: #FFFFFF; /* White */
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    padding: 0 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#topnav-centered button:hover {
+    background-color: #757575; /* Lighter Gray */
+}
+
+/* Logo */
+#logo, #gus-pic {
+    grid-column: 1 / span 12;
+    text-align: center;
+    padding-left: 10px;
+}
+
+#logo img, #gus-pic img {
+    width: 100%; /* Make the image fill its container */
+    max-width: 300px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Content */
+article {
+    grid-column: 1 / span 12;
+    padding: 20px;
+    text-align: center;
+}
+
+#content h2, #content p {
+    margin: 10px 0;
+}
+
+#content a[href^="tel:"] {
+    display: block;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #D32F2F; /* Red */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #0D47A1; /* Navy Blue */
+    color: #FFFFFF; /* White */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF; /* White */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 8px;
+}
+
+.dropdown-content ul li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-content ul li:hover {
+    background-color: #FFD54F; /* Light Yellow */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #1565C0; /* Lighter Navy Blue */
+}
+
+/* Bottom section */
+#bottom-div {
+    grid-column: 1 / span 12;
+    padding: 20px
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    #topnav-centered {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #topnav-centered button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
