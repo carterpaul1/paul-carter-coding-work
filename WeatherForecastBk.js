@@ -18,7 +18,7 @@ const WeatherForecast = ({ forecast }) => {
       {Object.keys(organizedForecast).map(date => (
         <div key={date}>
           <h3>{new Date(date).toLocaleDateString()}</h3>
-          <table>
+          <table border="1" cellPadding="10" cellSpacing="0">
             <thead>
               <tr>
                 <th>Date and Time</th>
@@ -39,8 +39,6 @@ const WeatherForecast = ({ forecast }) => {
 };
 
 export default WeatherForecast;
-
-
 
 
 

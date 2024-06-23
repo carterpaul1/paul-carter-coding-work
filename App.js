@@ -11,7 +11,7 @@ function App() {
         <img src="ECPI-Seal.png" alt="ECPI-Seal" />
       </div>
 	  <div>
-      <h1>Every Three Hour forecast for Weather and Pollen</h1>
+      <h1>Every Three Hour forecast for Weather</h1>
 	  <h1>The weather forecast is being pulled through an API Call to openWeathermap.com</h1>
       <WeatherForm />
     </div>
